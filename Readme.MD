@@ -13,7 +13,7 @@ You will need Node.js and npm installed on your machine. You can download and in
 ```bash
 node --version
 npm --version
-npm install i
+npm i
 ```
 
 ### Setting up the project environment
