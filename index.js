@@ -35,14 +35,19 @@ if (cluster.isMaster) {
   app.use(process.env.Base_End_Point, userRouter);
   app.use(process.env.Base_End_Point, authRouter);
 
-  app.get("/", (req, res) => {
-    res.status(200).json({
-      message: "API is running...",
-    });
+  app.get(`${process.env.Base_End_Point}/`, (req, res) => {
+    let total = 0;
+    for (let i = 0; i < 1e6; i++) {
+      total += i;
+    }
+    res.send(`Total is ${total}`);
   });
+
+
 
   app.listen(process.env.PORT, () => {
     console.log(`Server running on port: ` + `${process.env.PORT}`.green.bold);
+    console.log(`Worker ${process.pid} started`);
   });
 
   app.use((err, req, res, next) => {

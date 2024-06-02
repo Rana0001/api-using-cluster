@@ -31,19 +31,15 @@ Base_End_Point=/api/v1
 
 ### Responses without using clustering
 
-```bash
-LoginResponse Time: 151ms
-RegisterResponse Time: 144ms
-GetAllUsersResponse Time: 153ms
-```
+![alt text](image.png)
+![alt text](image-1.png)
 
 ### Responses using clustering
 
-```bash
-LoginResponse Time: 8ms
-RegisterResponse Time: 83ms
-GetAllUsersResponse Time: 131ms / 90ms / 80ms / 75ms
-```
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
 In the above responses, you can see that the response time is significantly reduced when using clustering.
 
 
