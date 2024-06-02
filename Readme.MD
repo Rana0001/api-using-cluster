@@ -16,6 +16,19 @@ npm --version
 npm install i
 ```
 
+### Setting up the project environment
+
+1. Add a `.env` file in the root directory of the project and add the following environment variables:
+
+```bash
+MONGODB_URL=mongodb://localhost:27017/your_db_name
+PORT=3000
+JWT_SECRET=your_secret_key
+Base_End_Point=/api/v1
+```
+
+
+
 ### Responses without using clustering
 
 ```bash
